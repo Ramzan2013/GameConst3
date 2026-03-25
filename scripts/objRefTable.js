@@ -1,0 +1,73 @@
+const C3 = self.C3;
+self.C3_GetObjectRefTable = function () {
+	return [
+		C3.Plugins.Sprite,
+		C3.Behaviors.scrollto,
+		C3.Behaviors.wrap,
+		C3.Behaviors.Platform,
+		C3.Behaviors.solid,
+		C3.Plugins.TiledBg,
+		C3.Plugins.Keyboard,
+		C3.Plugins.Text,
+		C3.Behaviors.Anchor,
+		C3.Plugins.Browser,
+		C3.Plugins.Sprite.Cnds.OnCollision,
+		C3.Plugins.Sprite.Acts.Destroy,
+		C3.Plugins.System.Acts.AddVar,
+		C3.Behaviors.Platform.Cnds.OnJump,
+		C3.Plugins.Sprite.Acts.SetAnimFrame,
+		C3.Behaviors.Platform.Cnds.OnLand,
+		C3.Behaviors.Platform.Cnds.OnMove,
+		C3.Plugins.Sprite.Acts.StartAnim,
+		C3.Plugins.Keyboard.Cnds.IsKeyDown,
+		C3.Plugins.Sprite.Acts.SetMirrored,
+		C3.Plugins.System.Cnds.EveryTick,
+		C3.Plugins.Text.Acts.SetText,
+		C3.Plugins.System.Cnds.OnLayoutStart,
+		C3.Plugins.Text.Acts.SetVisible,
+		C3.Plugins.System.Acts.NextPrevLayout,
+		C3.Plugins.System.Acts.Wait,
+		C3.Plugins.Browser.Acts.Close,
+		C3.Plugins.Sprite.Acts.SetVisible
+	];
+};
+self.C3_JsPropNameTable = [
+	{Счет: 0},
+	{СледитьЗа: 0},
+	{Заворачивание: 0},
+	{Платформер: 0},
+	{Персонаж: 0},
+	{Твёрдый: 0},
+	{Земля: 0},
+	{Дерево: 0},
+	{Камень: 0},
+	{Счет1: 0},
+	{Фон: 0},
+	{Опыт: 0},
+	{Клавиатура: 0},
+	{Якорь: 0},
+	{Флаг: 0},
+	{ТекстПобеда: 0},
+	{Шипы: 0},
+	{Портал: 0},
+	{ТекстШипы: 0},
+	{Браузер: 0},
+	{Счёт: 0}
+];
+
+self.InstanceType = {
+	Персонаж: class extends self.ISpriteInstance {},
+	Земля: class extends self.ISpriteInstance {},
+	Дерево: class extends self.ISpriteInstance {},
+	Камень: class extends self.ISpriteInstance {},
+	Фон: class extends self.ITiledBackgroundInstance {},
+	Опыт: class extends self.ISpriteInstance {},
+	Клавиатура: class extends self.IInstance {},
+	Счет: class extends self.ITextInstance {},
+	Флаг: class extends self.ISpriteInstance {},
+	ТекстПобеда: class extends self.ITextInstance {},
+	Шипы: class extends self.ISpriteInstance {},
+	Портал: class extends self.ISpriteInstance {},
+	ТекстШипы: class extends self.ITextInstance {},
+	Браузер: class extends self.IInstance {}
+}
